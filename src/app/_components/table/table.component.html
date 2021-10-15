@@ -1,0 +1,25 @@
+<div class="container mx-auto">
+    <table class="table table-hover table-bordered align-middle text-center">
+        <thead class="table-dark">
+            <tr>
+                <td style="width: 25%">Name
+                    <span>
+                        <button type="button" class="btn btn-sm btn-link" (click)="orderNamesDescending()"><i class="bi bi-chevron-down"></i></button>
+                        <button type="button" class="btn btn-sm btn-link" (click)="orderNamesAscending()"><i class="bi bi-chevron-up"></i></button>
+                    </span>
+                </td>
+                <td style="width: 25%">Patronus</td>
+                <td style="width: 25%">Age</td>
+                <td style="width: 25%">Image</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of people">
+                <td>{{person.name}}</td>
+                <td>{{person.patronus}}</td>
+                <td>{{calculateAge(person)}}</td>
+                <td><img class="rounded mx-auto d-block" src={{person.image}}></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

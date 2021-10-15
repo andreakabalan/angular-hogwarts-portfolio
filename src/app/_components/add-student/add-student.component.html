@@ -1,0 +1,23 @@
+<div class="container mx-auto my-5 text-white bg-dark" style="width: 500px;">
+    <form class="row g-3 p-3">
+        <div class="col-12">
+            <label for="inputName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="inputName" [formControl]="name">
+        </div>
+        <div class="col-12">
+            <label for="inputPatronus" class="form-label">Patronus</label>
+            <input type="text" class="form-control" id="inputPatronus" [formControl]="patronus">
+        </div>
+        <div class="col-12">
+            <label for="inputBirthday" class="form-label">Birthday</label>
+            <input type="date" class="form-control" id="inputBirthday" [formControl]="dateOfBirth">
+        </div>
+        <div class="col-12">
+            <label for="inputImage" class="form-label">Image Link</label>
+            <input type="submit" class="form-control" id="inputImage" [formControl]="image">
+        </div>
+        <div class="col-12">
+            <button type="button" class="btn btn-primary" (click)="submit()">Add</button>
+        </div>
+    </form>
+</div>
